@@ -13,6 +13,7 @@ Crear un sistema CRUD (Crear, Leer, Actualizar, Eliminar) utilizando MongoDB com
     -   JWT
     -   Express
     -   Bcrypt
+    -   Handlebars
 -   Mongoose
 
 ## ¿Cómo empiezo?
