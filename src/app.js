@@ -5,20 +5,22 @@ import { PORT } from "./config.js";
 import userRoute from "./routes/userRoute.js";
 import productRoute from "./routes/productRoute.js";
 import categoryRoute from "./routes/categoryRoute.js";
-import authRoute from "./routes/authRoute.js";
+import { engine } from 'express-handlebars';
 
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.engine("handlebars", engine());
+app.set("view engine", "handlebars");
+app.set("views","./src/views")
+
 connectDB();
 
 app.get("/", (req, res) => {
-  res.send("HOLA MUNDO");
+  res.render("home");
 });
 
-
-app.use("/api/auth", authRoute);
 app.use("/api/user", userRoute);
 app.use("/api/product", productRoute);
 app.use("/api/category", categoryRoute);
