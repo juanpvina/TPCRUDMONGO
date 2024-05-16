@@ -24,8 +24,8 @@ export const create = async (req, res) => {
         .status(400)
         .json({ message: `Ya existe un usuario con el email: ${email} .` });
     }
-    const savedUser = await userData.save();
-    res.status(200).json(savedUser);
+    await userData.save();
+    res.render('home');
   } catch (error) {
     res.status(500).json({ message: "internal server error", error });
   }
@@ -60,3 +60,11 @@ export const deleteUser = async (req, res) => {
     res.status(500).json({ error: "internal server error" });
   }
 };
+
+
+export const createView = (req, res) => {
+  res.render("create");
+}
+export const loginView = (req, res) => {
+  res.render("login");
+}

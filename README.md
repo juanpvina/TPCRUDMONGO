@@ -27,20 +27,8 @@ Crear un sistema CRUD (Crear, Leer, Actualizar, Eliminar) utilizando MongoDB com
 
 - Ejecuta la aplicación usando el comando *npm run dev*.
 
-- ejemplo de dato user:
+## Registro
+ - para crear tu usuario, podes entrar en /api/user/create 
 
-- {
-
-  "nombre": "javier",
-
-  "apellido": "lpz",
-
-  "email": "jr@gmail.com",
-
-  "carrera": "desarrollo web",
-
-  "edad":31,
-
-  "password":"Javier000"
-
-  }
+## Logeo
+ - para iniciar sesión, podes entrar en /api/user/login
