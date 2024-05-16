@@ -8,7 +8,7 @@ const taxPrice = 1.21;
 const productSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: [true, "Name field is required"],
+    required: [true, "Necesita un nombre"],
     minLength: 3,
     unique: true,
     lowercase: true,
@@ -16,9 +16,8 @@ const productSchema = new mongoose.Schema({
   },
   price: {
     type: Number,
-    required: [true, "Price field is required"],
-    min: [0, "Price field has to be a number"],
-    //Al consultar precio multiplica el valor guardado en price
+    required: [true, "Necesita un precio"],
+    min: [0, "El precio debe ser un numero"],
     get: function (value) {
       return value * taxPrice;
     },
@@ -31,13 +30,13 @@ const productSchema = new mongoose.Schema({
       validator: function (v) {
         return statusEnum.includes(v);
       },
-      message: props => `${props.value} is not valid`,
+      message: props => `${props.value} no es valido`,
     },
   },
-  //se referencia el id de categoría
+
   category: {type: mongoose.Schema.Types.ObjectId, 
     ref: "category", 
-    required: [true, "Category code is not valid"],
+    required: [true, "Codigo de categoria no valido"],
 },
   createdAt: {
       type: Date,

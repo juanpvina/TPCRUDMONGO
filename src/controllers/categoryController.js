@@ -44,14 +44,11 @@ export const create = async (req, res) => {
   
   export const deleteCategory = async (req, res) => {
     try {
-      //saber que vamos a eliminar con un identificador unico id (delete)
       const _id = req.params.id;
       const categoryExist = await Category.findOne({ _id });
-      //se valida para saber si existe la entidad a eliminar
       if (!categoryExist) {
         return res.status(404).json({ message: "No se encontro la categoria" });
       }
-      //Se elimina la categoría
       await Category.findByIdAndDelete(_id);
       res.status(201).json({ message: "Categoria borrada" });
     } catch (error) {

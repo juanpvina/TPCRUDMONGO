@@ -16,7 +16,10 @@ export const validate = async (req, res) => {
         userEmail: userFound.email,
       };
       const token = jwt.sign(payload, "secreto", { expiresIn: "1h" });
-      res.status(200).json({ message: `Logeado Correctamente`});
+      res.status(200).json({ message: `Logeado Correctamente` ,
+        token: token,
+      });
+
     } else {
       res
         .status(400)

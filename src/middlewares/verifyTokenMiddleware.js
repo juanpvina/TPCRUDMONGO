@@ -6,7 +6,7 @@ export const verifyTokenMiddleware = (req, res, next) => {
   if (!authHeader) {
     return res
       .status(401)
-      .json({ message: "No token"});
+      .json({ message: "No token" });
   }
   const token = authHeader.substring(7);
 
@@ -14,6 +14,7 @@ export const verifyTokenMiddleware = (req, res, next) => {
     const decoded = verifyToken(token);
     req.user = decoded;
     next();
+    
   } catch (error) {
     return res.status(401).json({ message: "Acceso denegado" });
   }
