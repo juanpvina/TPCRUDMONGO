@@ -17,19 +17,30 @@ Crear un sistema CRUD (Crear, Leer, Actualizar, Eliminar) utilizando MongoDB com
 
 ## ¿Cómo empiezo?
 
-Ejecuta las dependencias.
-*npm install*
-Crea un archivo y configura las variables de entorno.
-.env
-Ejecuta la aplicación usando el comando *npm run dev*.
+- Ejecuta las dependencias.
 
-ejemplo de dato user:
+- *npm install*
 
-{
+- Crea un archivo y configura las variables de entorno.
+
+- .env
+
+- Ejecuta la aplicación usando el comando *npm run dev*.
+
+- ejemplo de dato user:
+
+- {
+
   "nombre": "javier",
+
   "apellido": "lpz",
+
   "email": "jr@gmail.com",
+
   "carrera": "desarrollo web",
+
   "edad":31,
+
   "password":"Javier000"
+
   }

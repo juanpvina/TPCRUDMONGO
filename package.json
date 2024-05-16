@@ -1,7 +1,7 @@
 {
   "name": "TPCRUDMONGO",
   "version": "1.0.0",
-  "description": "Este proyecto implementa operaciones CRUD (Create, Read, Update, Delete) con autenticación encriptada en una base de datos utilizando una API REST. La aplicación se conecta a una base de datos que incluye las entidades \"usuarios,\" \"categorías,\" y \"productos,\" permitiendo la manipulación de datos a través de direcciones y métodos HTTP.",
+  "description": "sistema CRUD (Crear, Leer, Actualizar, Eliminar) utilizando MongoDB como base de datos",
   "main": "app.js",
   "type": "module",
   "scripts": {
